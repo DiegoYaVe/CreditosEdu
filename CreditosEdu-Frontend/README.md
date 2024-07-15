@@ -1,3 +1,6 @@
+# CreditosEdu
+Angular + Java Spring (Spring boot) + JWT + MySQL. CRUD y Login.
+
 # Frontend del Sistema de Gestión de Objetos 
 
 | Angular|

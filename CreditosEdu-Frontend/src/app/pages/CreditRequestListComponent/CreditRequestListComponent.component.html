@@ -1,0 +1,61 @@
+<div class="container" style="margin-top: 30px;">
+  <div class="card">
+    <div class="card-body">
+      <div class="text-center" style="margin: 30px;">
+        <h3>Listado de Créditos</h3>
+      </div>
+
+      <div class="mb-3 col-1">
+        <a href="/credit-requests-reg">
+          <button type="button" class="btn btn-sm btn-primary">+ Nuevo</button>
+        </a>
+      </div>
+
+<!--       <form (ngSubmit)="buscarObjetos()">
+        <div class="row mb-3">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="filtros.nombre" name="nombre" />
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Descripción" [(ngModel)]="filtros.descripcion" name="descripcion" />
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" placeholder="Crédito" [(ngModel)]="filtros.precio" name="precio" />
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+          </div>
+        </div>
+      </form> -->
+      
+      <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre solicitante</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Crédito</th>
+            <th scope="col">Estatus</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let objeto of objetos">
+            <th scope="row">{{objeto.id}}</th>
+            <td>{{objeto.userId}}</td>
+            <td>{{objeto.purpose}}</td>
+            <td>{{objeto.amount | currency}}</td>
+            <td>{{ objeto.status === 1 ? 'Activo' : 'Inactivo' }}</td>
+            <td class="text-center">
+              <div>
+                <button (click)="editarObjeto(objeto.id)" class="btn btn-warning btn-sm me-3">Editar</button>
+                <button (click)="eliminarObjeto(objeto.id)" class="btn btn-danger btn-sm">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

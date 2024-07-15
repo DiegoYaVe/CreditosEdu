@@ -1,0 +1,75 @@
+<!-- <section class="h-100 gradient-form" style="background-color: #eee;"> -->
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+                <div class="card rounded-3 text-black">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="card-body p-md-5 mx-md-4">
+    
+                                <div class="text-center">
+                                    <!-- <h4 class="mt-1 mb-5 pb-1">Iniciar Sesión</h4> -->
+                                    <img src="assets/images/Logo.png" style="width: 185px; border-radius: 15px;" alt="logo">
+                                </div>
+    
+                                <br>
+                                <form [formGroup]="loginForm">
+                                    <p class="text-danger">{{loginError}}</p>
+                                    <div class="form-outline mb-4">
+                                        <!-- <label class="form-label" for="username">Usuario</label>
+                                        <input type="email" id="exampleInputEmail1" class="form-control"
+                                            placeholder="Correo electrónico" required> -->
+                                        <label for="exampleInputEmail1" class="form-label">Nombre de Usuario</label>
+                                        <input formControlName="username" type="text" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+                                            <div *ngIf="email.errors?.['required']">
+                                                El nombre de usuario es requerido.
+                                            </div>
+                                            <div hidden *ngIf="email.errors?.['email']">
+                                                El Email debe tener un formato válido.
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="form-outline mb-4">
+                                        <!-- <label class="form-label" for="password">Contraseña</label>
+                                        <input type="password" id="password" class="form-control" placeholder="Contraseña"
+                                            [(ngModel)]="password" name="password" required> -->
+                                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                                        <input formControlName="password" type="password" class="form-control"
+                                            id="exampleInputPassword1">
+                                        <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                                            class="text-danger">
+                                            <div *ngIf="password.errors?.['required']">
+                                                El Password es requerido.
+                                            </div>
+                                        </div>
+                                    </div>
+
+    
+                                    <button class="btn btn-primary btn-block" (click)="login()" type="submit">Iniciar Sesión</button>
+                                    <br><br>
+                                    <a href="/register">
+                                        <p>¿No tienes cuenta?. Registrate.</p>
+                                    </a>
+                                </form>
+    
+    
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                <h4 class="mb-4">Tu Solución para Créditos Estudiantiles</h4>
+                                <p class="small mb-0">No dejes que el financiamiento sea un obstáculo para tu educación.
+                                    Estamos aquí para ayudarte a abrir las puertas hacia un futuro brillante.
+                                    Explora nuestra página, descubre nuestras opciones de créditos y da el primer paso hacia
+                                    tus metas académicas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--   </section> -->

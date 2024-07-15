@@ -1,0 +1,30 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-custom"> -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  
+  <div class="container-fluid gradient-custom-2 gradient-custom-2 bg-custom">
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="assets/images/Logo.png" alt="Angular Logo" class="logo">
+      <!-- <img src="assets/images/spring-logo.png" alt="Spring Boot Logo" class="logo logo-bg-white"> -->
+      <span>Créditos Educativos</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/credit-requests" routerLinkActive="active"><i class="fas fa-home"></i> Inicio</a>
+        </li>
+<!--         <li class="nav-item">
+          <a class="nav-link" routerLink="/users" routerLinkActive="active"><i class="fas fa-list"></i> Listado</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/user" routerLinkActive="active"><i class="fas fa-info-circle"></i> Perfil</a>
+        </li> -->
+        <li *ngIf="userLoginOn" class="nav-item">
+          <a class="nav-link" (click)="logout()"  routerLink="/login" routerLinkActive="active"><i class="fas fa-cogs"></i> Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

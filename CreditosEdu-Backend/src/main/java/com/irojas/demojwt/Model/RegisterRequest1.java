@@ -1,0 +1,17 @@
+package com.irojas.demojwt.Model;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+@CrossOrigin(origins = {"http://localhost:4200"})
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class RegisterRequest1 {
+    String username;
+    String password;
+}

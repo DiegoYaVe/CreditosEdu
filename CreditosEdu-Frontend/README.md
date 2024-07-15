@@ -55,7 +55,7 @@ Permite a los usuarios eliminar un objeto de la base de datos. La eliminación s
 ### Pasos
 1. Clonar el repositorio:
     ```bash
-    git clone https://github.com/Julian1699/Base-Angular-SpringBoot.git
+    git clone https://github.com/DiegoYaVe/CreditosEdu.git
     ```
 
 2. Instalar las dependencias:
@@ -65,14 +65,17 @@ Permite a los usuarios eliminar un objeto de la base de datos. La eliminación s
     npm install
     ```
 
+3. Instalar la libreria de alertas:
+    ```bash
     npm install sweetalert2
+    ```
 
-3. Ejecutar la aplicación:
+4. Ejecutar la aplicación:
     ```bash
     npm start
     ```
 
-4. Acceder a la aplicación en [http://localhost:4200].
+5. Acceder a la aplicación en [http://localhost:4200].
 
 
 ## Backend

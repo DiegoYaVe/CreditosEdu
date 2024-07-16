@@ -63,7 +63,7 @@ Permite a los usuarios eliminar un objeto de la base de datos. La eliminación s
 
 2. Instalar las dependencias:
     ```bash
-    cd frontend-angular
+    cd CreditosEsu-Frontend
     
     npm install
     ```
